@@ -3,14 +3,14 @@ pipeline {
 
     environment {
         DOCKER_IMAGE = "your-dockerhub-username/jenkins-k8s-demo"
-        DOCKERHUB_CREDENTIALS_ID = 'dockerhub-credentials' 
-        KUBECONFIG_CREDENTIALS_ID = 'kubeconfig'           
+        DOCKERHUB_CREDENTIALS_ID = 'dockerhub-credentials'
+        KUBECONFIG_CREDENTIALS_ID = 'kubeconfig'
     }
 
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/KiKSmArT/jenkins-k8s-demo'
+                git branch: 'main', url: 'https://github.com/KiKSmArT/jenkins-k8s-demo'
             }
         }
 
