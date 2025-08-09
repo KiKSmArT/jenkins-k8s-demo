@@ -6,7 +6,7 @@ const podId = process.env.POD_NAME || `not running through a POD`;
 
 app.get('/', (req, res) => {
     console.log(`Request served by ${podId}`);
-    res.send(`Hello from Jenkins + Kubernetes! Served by ${podId}`);
+    res.send(`Hello from Jenkins which works now! Served by ${podId}`);
 });
 
 const PORT = process.env.PORT || 3000;
